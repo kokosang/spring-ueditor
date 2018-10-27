@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>ueditor demo</title>
+</head>
+
+<body>
+<form action="/ueditor/save/content" method="post">
+    <!-- 加载编辑器的容器 -->
+    <script id="container" name="content" type="text/plain">
+            这里写你的初始化内容
+     </script>
+</form>
+<!-- 配置文件 -->
+<script type="text/javascript" src="ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var ue = UE.getEditor('container');
+
+/*    UE.Editor.prototype._bkGetActionUrl = UE.Editor.prototype.getActionUrl;
+    UE.Editor.prototype.getActionUrl = function(action) {
+        if (action == 'uploadimage' || action == 'uploadscrawl' || action == 'uploadimage') {
+            return 'http://localhost:8080/ueditor/uploadimage'; //在这里返回我们实际的上传图片地址
+        } else {
+            return this._bkGetActionUrl.call(this, action);
+        }
+    }*/
+</script>
+</body>
+
+</html>
